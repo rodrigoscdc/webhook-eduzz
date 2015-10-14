@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Webhook Eduzz by deveduzz</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Webhook Eduzz</h1>
+        <p>Receba todas as alterações de status de uma fatura </p>
+
+        <p class="view"><a href="https://github.com/deveduzz/webhook-eduzz">View the Project on GitHub <small>deveduzz/webhook-eduzz</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/deveduzz/webhook-eduzz/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/deveduzz/webhook-eduzz/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/deveduzz/webhook-eduzz">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="webhook-eduzz" class="anchor" href="#webhook-eduzz" aria-hidden="true"><span class="octicon octicon-link"></span></a>webhook-eduzz</h1>
+
+<p>O webhook permite que você receba notificações a cada alteração de status de uma compra. Sempre que uma compra tiver seu status atualizado ( Pago, Cancelado, Reembolsado, etc... ) nós iremos enviar uma chamada via POST para uma URL pré-configurada nas configurações do seu conteúdo com alguns parâmetros para que você possa realizar suas decisões comerciais.</p>
+
+<p>Consideramos como <strong>sucesso</strong> todas as requisições que retornam o <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">status HTTP 200</a> </p>
+
+<h2>
+<a id="lista-de-parâmetros" class="anchor" href="#lista-de-par%C3%A2metros" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lista de parâmetros</h2>
+
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trans_cod</td>
+<td>ID da Fatura na Eduzz ( Venda )</td>
+</tr>
+<tr>
+<td>trans_value</td>
+<td>Valor da compra</td>
+</tr>
+<tr>
+<td>trans_paid</td>
+<td>Valor pago</td>
+</tr>
+<tr>
+<td>trans_status</td>
+<td>Status do pagamento ( Ver tabela de status )</td>
+</tr>
+<tr>
+<td>trans_createdate</td>
+<td>Data de criação da fatura</td>
+</tr>
+<tr>
+<td>trans_paiddate</td>
+<td>Data de pagamento da fatura</td>
+</tr>
+<tr>
+<td>product_cod</td>
+<td>ID do produto ( Conteúdo )</td>
+</tr>
+<tr>
+<td>product_name</td>
+<td>Nome do produto</td>
+</tr>
+<tr>
+<td>cus_cod</td>
+<td>ID do Cliente na Eduzz</td>
+</tr>
+<tr>
+<td>cus_taxnumber</td>
+<td>Documento do Cliente</td>
+</tr>
+<tr>
+<td>cus_name</td>
+<td>Nome do Cliente</td>
+</tr>
+<tr>
+<td>cus_email</td>
+<td>E-mail do Cliente</td>
+</tr>
+<tr>
+<td>cus_address</td>
+<td>Endereço do Cliente</td>
+</tr>
+<tr>
+<td>cus_address_number</td>
+<td>Número do Endereço do cliente</td>
+</tr>
+<tr>
+<td>cus_address_country</td>
+<td>País do Cliente</td>
+</tr>
+<tr>
+<td>cus_address_district</td>
+<td>Bairro do Cliente</td>
+</tr>
+<tr>
+<td>cus_address_comp</td>
+<td>Complemento do Cliente</td>
+</tr>
+<tr>
+<td>cus_address_city</td>
+<td>Cidade do Cliente</td>
+</tr>
+<tr>
+<td>cus_address_state</td>
+<td>Estado do Cliente</td>
+</tr>
+<tr>
+<td>cus_address_zip_code</td>
+<td>CEP do Cliente</td>
+</tr>
+<tr>
+<td>aff_cod</td>
+<td>ID do Afiliado na Eduzz</td>
+</tr>
+<tr>
+<td>aff_name</td>
+<td>Nome do Afiliado</td>
+</tr>
+<tr>
+<td>aff_email</td>
+<td>E-mail do Afiliado</td>
+</tr>
+<tr>
+<td>aff_value</td>
+<td>Valor da comissão do afiliado</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="tabela-de-status-da-fatura" class="anchor" href="#tabela-de-status-da-fatura" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tabela de status da fatura</h2>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Status</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Paga</td>
+<td>Compra foi paga, o cliente já esta apto a receber o produto</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cancelada</td>
+<td>Fatura Cancelada pela Eduzz</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Aguardando Reembolso</td>
+<td>Cliente solicitou reembolso, porem o mesmo ainda não foi efetuado</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reembolsado</td>
+<td>Cliente já foi reembolsado pela eduzz</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Em Análise</td>
+<td>Cliente efetuou o pagamento, porém esta em análise pela instituição financeira</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Em Recuperacao</td>
+<td>Fatura entrou para o processo de recuperação</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="exemplo-php" class="anchor" href="#exemplo-php" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exemplo php</h2>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-c">//Exemplo webhook Eduzz</span></span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-k">foreach</span> (<span class="pl-smi">$_POST</span> <span class="pl-k">as</span> <span class="pl-smi">$key</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$value</span>)  </span>
+<span class="pl-s1">        <span class="pl-smi">$$key</span> <span class="pl-k">=</span> <span class="pl-smi">$value</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-k">if</span>( <span class="pl-smi">$api_key</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>SUACHAVEDEAPI<span class="pl-pds">'</span></span> )</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">        <span class="pl-k">switch</span> (<span class="pl-smi">$trans_status</span>)</span>
+<span class="pl-s1">        {</span>
+<span class="pl-s1">            <span class="pl-k">case</span> <span class="pl-s"><span class="pl-pds">'</span>3<span class="pl-pds">'</span></span> :</span>
+<span class="pl-s1">                        <span class="pl-c">#Pagou</span></span>
+<span class="pl-s1">                        libera_acesso();</span>
+<span class="pl-s1">                <span class="pl-k">break</span>;</span>
+<span class="pl-s1">            <span class="pl-k">case</span> <span class="pl-s"><span class="pl-pds">'</span>6<span class="pl-pds">'</span></span>:   <span class="pl-c">#Aguardando reembolso</span></span>
+<span class="pl-s1">            <span class="pl-k">case</span> <span class="pl-s"><span class="pl-pds">'</span>7<span class="pl-pds">'</span></span>:   <span class="pl-c">#Reembolsado</span></span>
+<span class="pl-s1">                        remove_acesso();</span>
+<span class="pl-s1">                        <span class="pl-k">break</span>;</span>
+<span class="pl-s1">                <span class="pl-c">#...</span></span>
+<span class="pl-s1">                <span class="pl-c">#...</span></span>
+<span class="pl-s1">                <span class="pl-c">#...</span></span>
+<span class="pl-s1">            <span class="pl-k">default</span>:</span>
+<span class="pl-s1">                <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>STATUS DESCONHECIDO<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s1">                <span class="pl-k">break</span>;</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">    <span class="pl-k">else</span></span>
+<span class="pl-s1">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>ACESSO INVALIDO<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-k">function</span> <span class="pl-en">libera_acesso</span>()</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>ACESSO LIBERADO<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-k">function</span> <span class="pl-en">remove_acesso</span>()</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>ACESSO REMOVIDO<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"></span><span class="pl-pse"><span class="pl-s1">?</span>&gt;</span></pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/deveduzz">deveduzz</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
