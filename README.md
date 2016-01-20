@@ -11,6 +11,7 @@ trans_cod     | ID da Fatura na Eduzz ( Venda )
 trans_value | Valor da compra
 trans_paid    | Valor pago
 trans_status  | Status do pagamento ( Ver tabela de status )
+trans_paymentmethod | Forma de pagamento ( Ver tabela de forma de pagamento )
 trans_createdate | Data de criação da fatura
 trans_paiddate | Data de pagamento da fatura
 product_cod   | ID do produto ( Conteúdo )
@@ -43,6 +44,25 @@ ID  | Status | Descrição
 7 | Reembolsado | Cliente já foi reembolsado pela eduzz
 8 | Em Análise | Cliente efetuou o pagamento, porém esta em análise pela instituição financeira
 11 | Em Recuperacao | Fatura entrou para o processo de recuperação
+
+## Tabela de formas de pagamento
+ID| Forma de pagamento
+1 | Boleto Bancário
+9 | Paypal
+13 | Visa
+14 | Amex
+15 | Mastercard
+16 | Diners
+17 | Débito Banco do Brasil
+18 | Débito Bradesco
+19 | Débito Itaú
+21 | Hipercard
+22 | Débito Banrisul
+23 | Hiper
+24 | Elo
+25 | Paypal Internacional
+26 | Boleto - CEF
+
 
 ## Exemplo php
 ```php
