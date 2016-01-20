@@ -46,22 +46,23 @@ ID  | Status | Descrição
 11 | Em Recuperacao | Fatura entrou para o processo de recuperação
 
 ## Tabela de formas de pagamento
-ID| Forma de pagamento
-1 | Boleto Bancário
-9 | Paypal
-13 | Visa
-14 | Amex
-15 | Mastercard
-16 | Diners
-17 | Débito Banco do Brasil
-18 | Débito Bradesco
-19 | Débito Itaú
-21 | Hipercard
-22 | Débito Banrisul
-23 | Hiper
-24 | Elo
-25 | Paypal Internacional
-26 | Boleto - CEF
+ID	| Forma de pagamento
+----	| -----
+1 	| Boleto Bancário
+9 	| Paypal
+13 	| Visa
+1	| Amex
+15 	| Mastercard
+16 	| Diners
+17 	| Débito Banco do Brasil
+18 	| Débito Bradesco
+19 	| Débito Itaú
+21 	| Hipercard
+22 	| Débito Banrisul
+23 	| Hiper
+24 	| Elo
+25 	| Paypal Internacional
+26 	| Boleto - CEF
 
 
 ## Exemplo php
