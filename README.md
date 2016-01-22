@@ -62,7 +62,6 @@ ID	| Forma de pagamento
 23 	| Hiper
 24 	| Elo
 25 	| Paypal Internacional
-26 	| Boleto - CEF
 
 
 ## Exemplo php
