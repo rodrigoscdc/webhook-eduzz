@@ -51,7 +51,7 @@ ID	| Forma de pagamento
 1 	| Boleto Bancário
 9 	| Paypal
 13 	| Visa
-1	| Amex
+14	| Amex
 15 	| Mastercard
 16 	| Diners
 17 	| Débito Banco do Brasil
