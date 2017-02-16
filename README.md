@@ -7,6 +7,7 @@ Consideramos como **sucesso** todas as requisições que retornam o [status HTTP
 
 Parâmetro     | Descrição
 ------------- | -------------
+api_key | Token de segurança do produtor ou afiliado
 trans_cod     | ID da Fatura na Eduzz ( Venda )
 trans_value | Valor da compra
 trans_paid    | Valor pago
@@ -20,6 +21,9 @@ cus_cod	| ID do Cliente na Eduzz
 cus_taxnumber | Documento do Cliente
 cus_name | Nome do Cliente
 cus_email | E-mail do Cliente
+cus_tel | Telefone 1 do Cliente
+cus_tel2 | Telefone 2 do Cliente
+cus_cel | Celular do Cliente
 cus_address | Endereço do Cliente
 cus_address_number | Número do Endereço do cliente
 cus_address_country | País do Cliente
@@ -32,6 +36,12 @@ aff_cod | ID do Afiliado na Eduzz
 aff_name | Nome do Afiliado
 aff_email | E-mail do Afiliado
 aff_value | Valor da comissão do afiliado 
+billet_url | Página com a chave gerada para o produto
+page_checkout_url | Página do checkout do produto
+tracker_trk | Parâmetro genérico 1
+tracker_trk2 | Parâmetro genérico 2
+tracker_trk3 | Parâmetro genérico 3
+
 
 
 ## Tabela de status da fatura
