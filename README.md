@@ -5,42 +5,42 @@ Consideramos como **sucesso** todas as requisições que retornam o [status HTTP
 
 ## Lista de parâmetros
 
-Parâmetro     | Descrição
-------------- | -------------
-api_key | Token de segurança do produtor ou afiliado
-trans_cod     | ID da Fatura na Eduzz ( Venda )
-trans_value | Valor da compra
-trans_paid    | Valor pago
-trans_status  | Status do pagamento ( Ver tabela de status )
-trans_paymentmethod | Forma de pagamento ( Ver tabela de forma de pagamento )
-trans_createdate | Data de criação da fatura
-trans_paiddate | Data de pagamento da fatura
-product_cod   | ID do produto ( Conteúdo )
-product_name | Nome do produto
-cus_cod	| ID do Cliente na Eduzz
-cus_taxnumber | Documento do Cliente
-cus_name | Nome do Cliente
-cus_email | E-mail do Cliente
-cus_tel | Telefone 1 do Cliente
-cus_tel2 | Telefone 2 do Cliente
-cus_cel | Celular do Cliente
-cus_address | Endereço do Cliente
-cus_address_number | Número do Endereço do cliente
-cus_address_country | País do Cliente
-cus_address_district | Bairro do Cliente
-cus_address_comp | Complemento do Cliente
-cus_address_city | Cidade do Cliente 
-cus_address_state | Estado do Cliente
-cus_address_zip_code | CEP do Cliente
-aff_cod | ID do Afiliado na Eduzz
-aff_name | Nome do Afiliado
-aff_email | E-mail do Afiliado
-aff_value | Valor da comissão do afiliado 
-billet_url | Página com a chave gerada para o produto
-page_checkout_url | Página do checkout do produto
-tracker_trk | Parâmetro genérico 1
-tracker_trk2 | Parâmetro genérico 2
-tracker_trk3 | Parâmetro genérico 3
+Parâmetro     | Descrição	| Tipo de Variável
+------------- | -------------	| -----------------
+api_key | Token de segurança do produtor ou afiliado | String
+trans_cod     | ID da Fatura na Eduzz ( Venda ) | Int
+trans_value | Valor da compra | Float
+trans_paid    | Valor pago | Float
+trans_status  | Status do pagamento ( Ver tabela de status ) | Int
+trans_paymentmethod | Forma de pagamento ( Ver tabela de forma de pagamento ) | Int
+trans_createdate | Data de criação da fatura | String
+trans_paiddate | Data de pagamento da fatura | String
+product_cod   | ID do produto ( Conteúdo ) | Int
+product_name | Nome do produto | String
+cus_cod	| ID do Cliente na Eduzz | Int
+cus_taxnumber | Documento do Cliente | String
+cus_name | Nome do Cliente | String
+cus_email | E-mail do Cliente | String
+cus_tel | Telefone 1 do Cliente | String
+cus_tel2 | Telefone 2 do Cliente | String
+cus_cel | Celular do Cliente | String
+cus_address | Endereço do Cliente | String
+cus_address_number | Número do Endereço do cliente | String
+cus_address_country | País do Cliente | String
+cus_address_district | Bairro do Cliente | String
+cus_address_comp | Complemento do Cliente | String
+cus_address_city | Cidade do Cliente  | String
+cus_address_state | Estado do Cliente | String
+cus_address_zip_code | CEP do Cliente | String
+aff_cod | ID do Afiliado na Eduzz | Int
+aff_name | Nome do Afiliado | String
+aff_email | E-mail do Afiliado | String
+aff_value | Valor da comissão do afiliado  | Float
+billet_url | Página com a chave gerada para o produto | String
+page_checkout_url | Página do checkout do produto | String
+tracker_trk | Parâmetro genérico 1 | String 
+tracker_trk2 | Parâmetro genérico 2 | String
+tracker_trk3 | Parâmetro genérico 3 | String
 
 
 
