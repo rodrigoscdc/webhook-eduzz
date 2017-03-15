@@ -48,6 +48,7 @@ tracker_trk3 | Parâmetro genérico 3 | String
 
 ID  | Status | Descrição
 --- | ------ | -----------
+1 | Aberta | Fatura aberta, cliente gerou boleto, mas ainda não foi compensado 
 3 | Paga | Compra foi paga, o cliente já esta apto a receber o produto 
 4 | Cancelada | Fatura Cancelada pela Eduzz
 6 | Aguardando Reembolso | Cliente solicitou reembolso, porem o mesmo ainda não foi efetuado
