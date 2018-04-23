@@ -58,7 +58,7 @@ tracker_utm_source | UTM Source | String
 trans_barcode | codigo de barra do boleto|String
 trans_cod | Id da fatura|Int
 trans_createdate | Data de criação da fatura|String
-trans_createtime | Hora de criação da fatura String
+trans_createtime | Hora de criação da fatura | String
 trans_currency | Moeda utilizada na transação|String
 trans_duedate | Data limite para o pagamento da fatura|String
 trans_duetime | Horario limite para o pagamento da fatura|String
