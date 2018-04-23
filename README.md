@@ -8,39 +8,71 @@ Consideramos como **sucesso** todas as requisições que retornam o [status HTTP
 Parâmetro     | Descrição	| Tipo de Variável
 ------------- | -------------	| -----------------
 api_key | Token de segurança do produtor ou afiliado | String
-trans_cod     | ID da Fatura na Eduzz ( Venda ) | Int
-trans_value | Valor da compra | Float
-trans_paid    | Valor pago | Float
-trans_status  | Status do pagamento ( Ver tabela de status ) | Int
-trans_paymentmethod | Forma de pagamento ( Ver tabela de forma de pagamento ) | Int
-trans_createdate | Data de criação da fatura | String
-trans_paiddate | Data de pagamento da fatura | String
-product_cod   | ID do produto ( Conteúdo ) | Int
+aff_cod | Id do afiliado | Int
+aff_document_number | Documento do afiliado | String
+aff_email | E-mail do afiliado | String
+aff_name |  Nome do afiliado | String
+aff_value] | Valor da comissão do afiliado | Float
+billet_url | Página com a chave gerada para o produto | String    
+cus_address | Endereço do cliente | String
+cus_address_city | Cidade do cliente | String
+cus_address_comp | Complemento do endereço do cliente | String
+cus_address_country | País do cliente | String
+cus_address_district | Bairro do cliente | String
+cus_address_number | Numero do endereço do cliente | String
+cus_address_state | Estado do clieente | String
+cus_address_zip_code | CEP do cliente | String
+cus_cel | Celular do cliente | String
+cus_tel | Telefone do cliente | String
+cus_tel2 | Segundo telefone do cliente | String
+cus_cod | Id do cliente na Eduzz | Int
+cus_email | E-mail do cliente | String
+cus_name | Nome do cliente | String
+cus_taxnumber | Documento do cliente | String    
+eduzz_value | Taxa cobrada pela Eduzz | Float
+page_checkout_url | URL do Checkout | String  
+pro_document_number | Documento do produtor | String
+pro_email | E-mail do produtor | String
+pro_name | Nome do produtor | String
+pro_value | Valor da comissão do produtor | Float 
+product_cod | ID do produto | Int
 product_name | Nome do produto | String
-cus_cod	| ID do Cliente na Eduzz | Int
-cus_taxnumber | Documento do Cliente | String
-cus_name | Nome do Cliente | String
-cus_email | E-mail do Cliente | String
-cus_tel | Telefone 1 do Cliente | String
-cus_tel2 | Telefone 2 do Cliente | String
-cus_cel | Celular do Cliente | String
-cus_address | Endereço do Cliente | String
-cus_address_number | Número do Endereço do cliente | String
-cus_address_country | País do Cliente | String
-cus_address_district | Bairro do Cliente | String
-cus_address_comp | Complemento do Cliente | String
-cus_address_city | Cidade do Cliente  | String
-cus_address_state | Estado do Cliente | String
-cus_address_zip_code | CEP do Cliente | String
-aff_cod | ID do Afiliado na Eduzz | Int
-aff_name | Nome do Afiliado | String
-aff_email | E-mail do Afiliado | String
-aff_value | Valor da comissão do afiliado  | Float
-billet_url | Página com a chave gerada para o produto | String
-page_checkout_url | Página do checkout do produto | String
-tracker_trk | Parâmetro genérico 1 | String 
+product_refund | Prazo em dias para reembolso do produto |  Int    
+recurrence_cod | Id do contrato | Int
+recurrence_count | Quantidade de cobranças já realizadas | Int
+recurrence_interval | Intervalo da recorrencia | Int
+recurrence_interval_type | Tipo de intervalo (por exemplo, se o campo anterior o valor for 1 e esse campo o valor for 'month', significa que faz 1 cobrança por mes...se o campo anterior for 1 e esse for 'day', a cobrança é diária, valores possíveis: day, month e year) | String 
+recurrence_plan | Nome do plano da recorrencia | String
+recurrence_startdate | Data de inicio da cobrança | String
+recurrence_status | Id do status do contrato | Int
+recurrence_status_name | Nome do status do contrato | String    
+recurrence_type | Indica se é a assinatura 2.0 | String
+sku_reference | Referência externa | String    
+tracker_trk |  Parâmetro genérico 1 | String
 tracker_trk2 | Parâmetro genérico 2 | String
 tracker_trk3 | Parâmetro genérico 3 | String
+tracker_utm_campaign | UTM Campaing | String
+tracker_utm_content | UTM Content | String
+tracker_utm_medium | UTM Medium | String
+tracker_utm_source | UTM Source | String
+trans_barcode | codigo de barra do boleto|String
+trans_cod | Id da fatura|Int
+trans_createdate | Data de criação da fatura|String
+trans_createtime | Hora de criação da fatura String
+trans_currency | Moeda utilizada na transação|String
+trans_duedate | Data limite para o pagamento da fatura|String
+trans_duetime | Horario limite para o pagamento da fatura|String
+trans_orderid | ID da Ordem|Int
+trans_paid | Valor pago|Float
+trans_paiddate | Data de pagamento|String
+trans_paidtime | Hhora de pagamento|String
+trans_paymentmethod | Forma de pagamento (Ver tabela de forma de pagamento)|Int
+trans_status | Status do pagamento (Ver tabela de status)|Int
+trans_value | Valor da venda|Float
+utm_campaign | UTM Campaing|String
+utm_content | UTM Content|String
+utm_medium | UTM Medium|String
+utm_source | UTM Source|String
 
 
 
