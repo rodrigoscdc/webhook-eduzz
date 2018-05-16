@@ -38,6 +38,7 @@ pro_value | Valor da comissão do produtor | Float
 product_cod | ID do produto | Int
 product_name | Nome do produto | String
 product_refund | Prazo em dias para reembolso do produto |  Int    
+discount_coupon_code | Código do Cupom de Desconto utilizado (ou Vazio caso não utilizou) | String
 recurrence_cod | Id do contrato | Int
 recurrence_count | Quantidade de cobranças já realizadas | Int
 recurrence_interval | Intervalo da recorrencia | Int
