@@ -12,7 +12,7 @@ aff_cod | Id do afiliado | Int
 aff_document_number | Documento do afiliado | String
 aff_email | E-mail do afiliado | String
 aff_name |  Nome do afiliado | String
-aff_value] | Valor da comissão do afiliado | Float
+aff_value | Valor da comissão do afiliado | Float
 billet_url | Página com a chave gerada para o produto | String    
 cus_address | Endereço do cliente | String
 cus_address_city | Cidade do cliente | String
@@ -70,6 +70,7 @@ trans_paidtime | Hhora de pagamento|String
 trans_paymentmethod | Forma de pagamento (Ver tabela de forma de pagamento)|Int
 trans_status | Status do pagamento (Ver tabela de status)|Int
 trans_value | Valor da venda|Float
+trans_items_quantity | Quantidade de itens da venda|Float
 utm_campaign | UTM Campaing|String
 utm_content | UTM Content|String
 utm_medium | UTM Medium|String
