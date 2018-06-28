@@ -71,6 +71,8 @@ trans_paymentmethod | Forma de pagamento (Ver tabela de forma de pagamento)|Int
 trans_status | Status do pagamento (Ver tabela de status)|Int
 trans_value | Valor da venda|Float
 trans_items_quantity | Quantidade de itens da venda|Float
+trans_job_id | Id Ordem do serviço (Job) |Int
+trans_job_status | Id Status da ordem do serviço (Job) |Int
 utm_campaign | UTM Campaing|String
 utm_content | UTM Content|String
 utm_medium | UTM Medium|String
