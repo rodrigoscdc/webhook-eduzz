@@ -89,8 +89,10 @@ ID  | Status | Descrição
 4 | Cancelada | Fatura Cancelada pela Eduzz
 6 | Aguardando Reembolso | Cliente solicitou reembolso, porem o mesmo ainda não foi efetuado
 7 | Reembolsado | Cliente já foi reembolsado pela eduzz
-8 | Em Análise | Cliente efetuou o pagamento, porém esta em análise pela instituição financeira
+9 | Duplicada | Cliente tentou comprar mais de uma vez o mesmo produto, a segunda fatura fica como duplicada e não é cobrada.
+10 | Expirada | A fatura que fica mais de 15 dias aberta é alterada para expirada.
 11 | Em Recuperacao | Fatura entrou para o processo de recuperação
+15 | Aguardando Pagamento | Faturas de recorrência após o vencimento ficam com o status aguardando pagamento
 
 ## Tabela de formas de pagamento
 ID	| Forma de pagamento
