@@ -45,8 +45,8 @@ recurrence_interval | Intervalo da recorrencia | Int
 recurrence_interval_type | Tipo de intervalo (por exemplo, se o campo anterior o valor for 1 e esse campo o valor for 'month', significa que faz 1 cobrança por mes...se o campo anterior for 1 e esse for 'day', a cobrança é diária, valores possíveis: day, month e year) | String 
 recurrence_plan | Nome do plano da recorrencia | String
 recurrence_startdate | Data de inicio da cobrança | String
-recurrence_status | Id do status do contrato | Int
-recurrence_status_name | Nome do status do contrato (Ver tabela de status de contratos) | String    
+recurrence_status | Id do status do contrato (Ver tabela de status de contratos) | Int
+recurrence_status_name | Nome do status do contrato | String    
 recurrence_type | Indica se é a assinatura 2.0 | String
 sku_reference | Referência externa | String    
 tracker_trk |  Parâmetro genérico 1 | String
