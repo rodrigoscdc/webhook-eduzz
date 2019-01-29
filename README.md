@@ -111,7 +111,7 @@ ID	| Forma de pagamento
 23 	| Hiper
 24 	| Elo
 25 	| Paypal Internacional
-
+27 	| Múltiplos Cartões
 
 ## Exemplo php
 ```php
