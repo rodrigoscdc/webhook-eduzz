@@ -46,7 +46,7 @@ recurrence_interval_type | Tipo de intervalo (por exemplo, se o campo anterior o
 recurrence_plan | Nome do plano da recorrencia | String
 recurrence_startdate | Data de inicio da cobrança | String
 recurrence_status | Id do status do contrato | Int
-recurrence_status_name | Nome do status do contrato | String    
+recurrence_status_name | Nome do status do contrato (Ver tabela de status de contratos) | String    
 recurrence_type | Indica se é a assinatura 2.0 | String
 sku_reference | Referência externa | String    
 tracker_trk |  Parâmetro genérico 1 | String
@@ -80,7 +80,7 @@ utm_source | UTM Source|String
 
 
 
-## Tabela de status da fatura
+## Tabela de status da faturas
 
 ID  | Status | Descrição
 --- | ------ | -----------
@@ -112,6 +112,21 @@ ID	| Forma de pagamento
 24 	| Elo
 25 	| Paypal Internacional
 27 	| Múltiplos Cartões
+
+## Tabela de status de contratos
+
+ID  | Status | Descrição
+--- | ------ | -----------
+1 | Em Dia | Contrato com pagamento em dia. 
+2 | Aguardando Pagamento | Esse status é acionado após o vencimento da fatura. Permanece por 3 dias.
+3 | Suspenso | O contrato não gera novas cobranças. Pode ser reativado.
+4 | Cancelado | O contrato do cliente foi cancelado.
+7 | Atrasado | Contrato sem pagamento há mais de 3 dias após o vencimento.
+9 | Finalizado | Todos os pagamentos foram realizados. Não gera novas cobranças.
+10 | Trial | Contrato em período de trial.
+
+
+
 
 ## Exemplo php
 ```php
