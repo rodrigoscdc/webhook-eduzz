@@ -71,8 +71,9 @@ trans_paymentmethod | Forma de pagamento (Ver tabela de forma de pagamento)|Int
 trans_status | Status do pagamento (Ver tabela de status)|Int
 trans_value | Valor da venda|Float
 trans_items_quantity | Quantidade de itens da venda|Float
-trans_job_id | Id Ordem do serviço (Job) |Int
+trans_job_id | Id Ordem do serviço na Eduzz (Job) |Int
 trans_job_status | Id Status da ordem do serviço (Job) |Int
+trans_orderid |Número da Ordem de Serviço (no Jobzz) | Int
 utm_campaign | UTM Campaing|String
 utm_content | UTM Content|String
 utm_medium | UTM Medium|String
@@ -125,7 +126,21 @@ ID  | Status | Descrição
 9 | Finalizado | Todos os pagamentos foram realizados. Não gera novas cobranças.
 10 | Trial | Contrato em período de trial.
 
+## Tabela de status de Jobzz
 
+ID  | Status | Descrição
+--- | ------ | -----------
+1 | Negotiation | Serviço em negociação. 
+2 | Waiting Start | Aguardando início.
+3 | In Progress | Em execução.
+4 | Late | Serviço atrasado.
+5 | Waiting Approval | Aguardando aprovação.
+6 | Disapproved | Serviço reprovado.
+7 | Finished | Serviço finalizado.
+8 | Cancellation Requested | Cancelamento de serviço foi solicitado.
+9 | In Dispute | Serviço está em disputa entre as partes.
+10 | Canceled | Serviço foi cancelado.
+11 | Adjusting | Serviço sendo ajustado.
 
 
 ## Exemplo php
